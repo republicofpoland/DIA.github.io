@@ -11,10 +11,11 @@ files.forEach(file => {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-        <td>${file}</td>
-        <td><a href="pdfs/${file}" target="_blank">閲覧</a></td>
-        <td><a href="pdfs/${file}" download>Download</a></td>
-    `;
+    <td data-label="文書名">${file}</td>
+    <td data-label="閲覧"><a href="pdfs/${file}" target="_blank">閲覧</a></td>
+    <td data-label="ダウンロード"><a href="pdfs/${file}" download>Download</a></td>
+`;
+
 
     fileList.appendChild(row);
 });
