@@ -121,3 +121,10 @@ footer {
         margin-bottom: 2px;
     }
 }
+
+/* 長いファイル名の折り返し対策 */
+td {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
