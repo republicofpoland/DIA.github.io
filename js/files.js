@@ -1,6 +1,6 @@
 const files = [
-    "20260114 Internal Assessment on the SORA Operation",
-    "20260126 Health Concerns Regarding Chinese State Chairman Fuzune"
+    "20260114_Internal_Assessment_on_the_SORA_Operation",
+    "20260126_Health_Concerns_Regarding_Chinese_State_Chairman_Fuzune"
 ];
 
 files.sort();
