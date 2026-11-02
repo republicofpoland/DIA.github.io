@@ -1,46 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ポーランド共和国 国家機密情報公開局</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d16" />
+    <meta name="description" content="ポーランド共和国 国家機密情報公開局（DIA）の公開文書アーカイブ。掲載文書の閲覧・保存ができます。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="国家機密情報公開局 | ポーランド共和国" />
+    <meta property="og:description" content="ポーランド共和国 国家機密情報公開局の公開文書アーカイブ。" />
+    <title>国家機密情報公開局 | ポーランド共和国</title>
     <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/files.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
 
-<header>
-    <div class="seal">🇵🇱</div>
-    <div>
-        <h1>ポーランド共和国 国家機密情報公開局</h1>
-        <p>Republic of Poland – Declassified Intelligence Archive</p>
+    <div class="notice-bar" role="note">
+        <span class="notice-bar__marker" aria-hidden="true"></span>
+        <p><strong>国家機密情報公開局</strong><span>ポーランド共和国　公開文書アーカイブ</span></p>
     </div>
-</header>
 
-<section class="notice">
-    <h2>機密解除文書アーカイブ</h2>
-    <p>以下の文書は国家機密保護法に基づき公開が許可された資料です。</p>
-</section>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="ポーランド共和国 国家機密情報公開局 — トップ">
+            <span class="brand__mark" aria-hidden="true">
+                <svg viewBox="0 0 40 40" focusable="false">
+                    <path d="M5 5h30v30H5z" />
+                    <path d="M12 28V12h7a8 8 0 0 1 0 16h-7Z" />
+                    <path d="M25 12v16" />
+                </svg>
+            </span>
+            <span class="brand__text">
+                <span class="brand__name">DIA <span>/</span> POLAND REPUBLIC</span>
+                <span class="brand__descriptor">DECLASSIFIED INTELLIGENCE ARCHIVE</span>
+            </span>
+        </a>
 
-<section class="archive">
-    <table>
-        <thead>
-            <tr>
-                <th>文書名</th>
-                <th>閲覧</th>
-                <th>ダウンロード</th>
-            </tr>
-        </thead>
-        <tbody id="file-list">
-            <!-- JSで自動生成 -->
-        </tbody>
-    </table>
-</section>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="menu-toggle__label">メニュー</span>
+            <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i></span>
+        </button>
+        <nav class="site-nav" id="primary-navigation" aria-label="メインナビゲーション">
+            <a href="#archive">文書アーカイブ</a>
+            <a href="#project-notes">このサイトについて</a>
+        </nav>
+    </header>
 
-<footer>
-    <p>© ポーランド共和国政府 | 情報公開部門</p>
-</footer>
+    <main id="main">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="hero__grid" aria-hidden="true"></div>
+            <div class="hero__content">
+                <p class="eyebrow"><span class="eyebrow__line"></span> REPUBLIC OF POLAND <span class="eyebrow__separator">/</span> DIA</p>
+                <h1 id="hero-title">Information.<br />Context.<br /><span>Record.</span></h1>
+                <p class="hero__summary">ポーランド共和国 国家機密情報公開局<br />公開文書アーカイブ</p>
+                <a class="primary-link" href="#archive">
+                    <span>文書一覧を見る</span>
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5" /></svg>
+                </a>
+            </div>
+            <div class="hero__aside" aria-hidden="true">
+                <span class="hero__aside-rule"></span>
+                <span>OFFICIAL<br />DOCUMENT ARCHIVE</span>
+                <span class="hero__aside-index">D / 01</span>
+            </div>
+            <div class="hero__coordinates" aria-hidden="true">DIA <span>—</span> ARCHIVE INDEX</div>
+        </section>
 
-<script src="js/files.js"></script>
+        <section class="archive-section" id="archive" aria-labelledby="archive-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow__line"></span> INDEX <span class="eyebrow__separator">/</span> 01</p>
+                    <h2 id="archive-title">Document archive</h2>
+                </div>
+                <p class="section-heading__note">公開文書の閲覧・保存ができます。<br />日付は各ファイル名に基づく表記です。</p>
+            </div>
+
+            <div class="archive-table" role="region" aria-label="文書一覧">
+                <div class="archive-table__head" aria-hidden="true">
+                    <span>DOCUMENT / ファイル名</span>
+                    <span>DATE IN FILENAME</span>
+                    <span>ACCESS</span>
+                </div>
+                <ol class="document-list" id="file-list" aria-live="polite">
+                    <li class="document-list__fallback">文書一覧を読み込んでいます。</li>
+                </ol>
+            </div>
+            <noscript><p class="noscript-note">文書一覧の表示にはJavaScriptが必要です。</p></noscript>
+        </section>
+
+        <section class="project-section" id="project-notes" aria-labelledby="project-title">
+            <div class="project-section__label">
+                <p class="eyebrow"><span class="eyebrow__line"></span> PROJECT NOTE <span class="eyebrow__separator">/</span> 02</p>
+            </div>
+            <div class="project-section__content">
+                <h2 id="project-title">Public document archive.</h2>
+                <p>国家機密情報公開局（DIA）の公開文書を掲載しています。各文書は一覧から閲覧、または保存できます。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-brand" href="#top">DIA <span>/</span> REPUBLIC OF POLAND</a>
+        <p>国家機密情報公開局 <span aria-hidden="true">·</span> ポーランド共和国</p>
+        <a class="back-to-top" href="#top">ページ上部へ <span aria-hidden="true">↑</span></a>
+    </footer>
 </body>
 </html>
